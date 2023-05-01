@@ -1,0 +1,718 @@
+body {
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  background-color: rgb(34, 34, 34);
+}
+
+header {
+  position: fixed;
+  width: 100%;
+  height: 70px;
+  z-index: 999;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: rgb(68, 68, 68);
+  box-sizing: border-box;
+  border-bottom: 1px solid black;
+}
+
+a.text:active,
+a.text:hover,
+a {
+  text-decoration: none;
+  color: white;
+}
+
+h2{
+  text-decoration: underline;
+  color: white;
+}
+
+.anemo {
+  background-color: rgba(51, 215, 160, 0.65);
+}
+
+.geo {
+  background-color: rgb(204, 170, 85);
+}
+
+.cryo {
+  background-color: rgb(171, 216, 226);
+}
+
+.pyro {
+  background-color: rgb(128, 77, 65);
+}
+
+.electro {
+  background-color: rgb(102, 76, 124);
+}
+
+.hydro {
+  background-color: rgb(20, 131, 172);
+}
+
+.dendro {
+  background-color: rgb(94, 126, 19);
+}
+
+.star_5{
+  background: linear-gradient(rgb(168, 107, 49), rgb(211, 130, 54));
+}
+
+.star_4{
+  background: linear-gradient(rgb(90, 76, 124), rgb(170, 146, 230));
+}
+
+.star_3{
+  background: linear-gradient(rgb(86, 116, 150),rgb(83, 146, 184))
+}
+
+.star_2{
+  background: linear-gradient(rgb(75, 108, 103),rgb(81, 144, 114));
+}
+
+.star_1{
+  background: linear-gradient(rgb(106, 109, 116),rgb(134, 133, 134));
+}
+
+.repeal-section{
+  margin-top: 10px;
+}
+
+.repeal{
+  font-size: 1.4em;
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+
+
+/* ЛОГО */
+
+.head-header{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: auto 15px;
+}
+
+.logo {
+  height: 66px;
+}
+
+.hide {
+  display: none;
+}
+
+.show {
+  display: none;
+}
+
+.info, .admin {
+  font-size: 35px;
+  margin: 10px;
+  color: white;
+  cursor: pointer;
+}
+
+.info:hover, .admin:hover {
+  text-shadow: 1px 0 12px #000, 0 1px 12px #000, -1px 0 12px #000,
+    0 -1px 12px #000;
+}
+
+.info_footer{
+  font-size: 35px;
+  margin: auto;
+  color: white;
+  cursor: pointer;
+}
+
+
+/* ПОИСК */
+
+.search_submit {
+  border-radius: 18px;
+  width: 50px;
+  margin: 0 0 0 10px;
+  height: 50px;
+  background-color: white;
+  border: 2px solid black;
+  background-image: url(../../image/imgElem/lupa.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  cursor: pointer;
+}
+
+.search_text {
+  height: 50px;
+  border-radius: 18px;
+  width: 350px;
+  font-size: 20px;
+  padding: 0 0 0 10px;
+}
+
+.search {
+  margin: 10px;
+  max-width: 450px;
+  display: flex;
+  align-items: center;
+}
+
+
+
+/* КОНТЕНТ */
+
+.content {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  padding-top: 60px;
+  color: rgb(221, 221, 221);
+  justify-content: center;
+  box-sizing: border-box;
+}
+
+.characters{
+  width: 95%;
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+}
+
+.characters-section{
+  width: 100%;
+  display: flex;
+  box-sizing: border-box;
+  margin: 10px auto;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.characters-section-line{
+  width: 100%;
+  border: 1px solid rgb(214, 214, 214);
+  margin: 10px auto;
+}
+
+.link-add-characters{
+  width: 200px;
+  font-size: 18px;
+  background-color: white;
+  color: black;
+  margin: 10px auto;
+  padding: 10px;
+  border: 1px solid black;
+  border-radius: 10px;
+  font-weight: bold;
+  cursor: pointer;
+  box-sizing: border-box;
+}
+
+.link-add-characters:hover{
+  box-shadow: 1px 1px 5px white,
+  -1px 1px 5px white,
+  1px -1px 5px white,
+  -1px -1px 5px white ;
+}
+
+
+/* Все персонажи */
+
+.characters-all{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+}
+
+/* Фильтр */
+
+.characters-all-filter{
+  display: flex;
+  width: 100%;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  user-select: none;
+}
+
+.active-filter-rare, .active-filter-element{
+  text-decoration: underline;
+  color: white;
+  text-shadow: 1px 1px 5px black,
+  -1px 1px 5px black,
+  1px -1px 5px black,
+  -1px -1px 5px black;
+}
+
+.active-filter-element > .characters-all-filter-element-item-image-icon{
+  filter: none;
+  box-shadow: 1px 1px 1px white,
+  -1px 1px 1px white,
+  1px -1px 1px white,
+  -1px -1px 1px white;
+}
+
+.characters-all-filter-rare{
+  display: flex;
+  margin: 10px;
+}
+
+.characters-all-filter-rare-line{
+  border: 1px solid rgb(214, 214, 214);
+  margin: 0 10px;
+}
+
+.characters-all-filter-rare-item-value, .characters-all-filter-element-item-value{
+  display: none;
+}
+
+.characters-all-filter-rare-item-text, .characters-all-filter-element-item-image{
+  cursor: pointer;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.characters-all-filter-rare-item-text img{
+  width: 12px;
+}
+
+.characters-all-filter-element{
+  display: flex;
+  flex-wrap: wrap;
+  margin: 10px;
+  justify-content: space-between;
+}
+
+.characters-all-filter-element-item{
+  display: flex;
+  align-items: center;
+}
+
+.characters-all-filter-element-item-image-icon{
+  width: 25px;
+  filter: brightness(60%);
+  background-color: rgb(0, 0, 0);
+  border-radius: 50%;
+  padding: 3px;
+}
+
+/* Показ персонажей */
+
+.characters-all-section{
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  box-sizing: border-box;
+}
+
+.characters-all-section-character{
+  width: 170px;
+  height: 400px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin: 20px;
+  border-radius: 10px;
+  box-sizing: border-box;
+  border: 1px solid black;
+}
+
+.characters-all-section-character:hover{
+  box-shadow: 1px 0 15px black, 0 1px 15px black, -1px 0 15px black, 0 -1px 15px black;
+}
+
+.characters-all-section-character-icon{
+  width: 100%;
+  margin: 5px auto;
+}
+
+.characters-all-section-character-name{
+  font-size: 25px;
+  text-shadow: 1px 0 5px #000, 0 1px 5px #000, -1px 0 5px #000, 0 -1px 5px #000;
+}
+
+.characters-all-section-character-rare{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.characters-all-section-character-rare-star{
+  margin: 5px;
+  width: 20px;
+}
+
+.characters-all-section-info{
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin: 5px auto;
+}
+
+.characters-all-section-character-info-weapon{
+  width: 70px;
+  height: 70px;
+}
+
+.characters-all-section-character-info-element{
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  padding: 3px;
+  background-color: rgb(46, 46, 46);
+}
+
+.characters-all-section-button{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.characters_delete, .characters_update{
+  margin: 5px;
+  padding: 5px;
+  font-size: 14px;
+  font-weight: bold;
+  border: 1px solid black;
+  border-radius: 10px;
+  background-color: white;
+  color: black;
+  font-family: Arial, Helvetica, sans-serif;
+  cursor: pointer;
+}
+
+.characters_delete:hover, .characters_update:hover{
+  box-shadow: 1px 1px 5px white,
+  -1px 1px 5px white,
+  1px -1px 5px white,
+  -1px -1px 5px white ;
+}
+
+
+
+/* ПОДВАЛ */
+
+footer {
+  position: relative;
+  vertical-align: middle;
+  width: 100%;
+  height: auto;
+  display: flex;
+  margin-top: 10px;
+  background-color: rgb(68, 68, 68);
+}
+
+.logo_footer {
+  height: 65px;
+  margin: 16px;
+}
+
+footer p {
+  color: white;
+  font-family: "Times New Roman", Times, serif;
+  margin: auto;
+  font-size: 25px;
+  padding: 5px;
+}
+
+/* МЕДИА-ЗАПРОСЫ */
+
+/* Для телефонов */
+
+@media screen and (max-width: 450px) {
+  body header {
+    display: flex;
+    height: auto;
+    width: 100%;
+    padding: auto;
+    margin: auto;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .info_footer {
+    font-size: 30px;
+  }
+
+  /* ЛОГО */
+
+  .head-header{
+    width: 100%;
+    margin: 0;
+  }
+
+  .logo {
+    height: 60px;
+  }
+
+  /* КНОПКА */
+
+  .hide {
+    display: none;
+    width: 25px;
+    height: 25px;
+  }
+
+  .visibility_header {
+    margin: 15px;
+    background: rgb(46, 38, 38, 0.5);
+    display: flex;
+    width: 25px;
+    height: 25px;
+    border: 2px solid black;
+  }
+
+  .show {
+    display: flex;
+    width: 25px;
+    height: 25px;
+  }
+
+  .info, .admin {
+    font-size: 30px;
+    display: none;
+    margin: auto;
+  }
+
+  /* ПОИСК */
+
+  .search_text {
+    width: 230px;
+    margin: 0;
+    padding: 0;
+    font-size: 14px;
+    height: 35px;
+    padding: 0 10px;
+    border-radius: 14px;
+  }
+
+  .search_submit{
+    width: 35px;
+    height: 35px;
+    border-radius: 14px;
+  }
+
+  .search {
+    display: none;
+    max-width: 100%;
+    width: auto;
+    margin: 10px 5px;
+    padding: 0;
+    justify-content: center;
+  }
+
+  /* КОНТЕНТ */
+
+  .characters{
+    width: 100%;
+  }
+
+  .characters-all-filter{
+    width: 95%;
+    margin: auto;
+  }
+
+  .characters-all-filter-element{
+    justify-content: center;
+  }
+
+  .characters-all-section{
+    justify-content: space-around;
+  }
+
+  .characters-all-section-character {
+    width: 150px;
+    height: 360px;
+    margin: 5px 1px;
+  }
+
+  .characters-all-section-character-name {
+    font-size: 20px;
+  }
+
+  .characters-all-section-character-rare-star {
+    width: 20px;
+    margin: 5px 2px;
+  }
+
+  .characters-all-section-character-info-element {
+    width: 30px;
+    height: 30px;
+  }
+
+  .characters-all-section-character-info-weapon {
+    width: 60px;
+    height: 60px;
+  }
+
+  
+
+  /* подвал*/
+
+  footer {
+    position: relative;
+    width: auto;
+    flex-direction: column;
+    margin: 30px 0 0 0;
+  }
+
+  footer p {
+    margin: auto auto 20px auto;
+    font-size: 20px;
+  }
+}
+
+/* Для планшетов */
+
+@media screen and (min-width: 451px) and (max-width: 950px) {
+  body header {
+    display: flex;
+    height: auto;
+    width: 100%;
+    padding: auto;
+    margin: auto;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .info_footer {
+    font-size: 30px;
+  }
+
+  /* ЛОГО */
+
+  .head-header{
+    width: 100%;
+    margin: 0;
+  }
+
+  .logo {
+    height: 60px;
+    margin: 0;
+    padding: 0;
+  }
+
+  /* КНОПКА */
+
+  .hide {
+    display: none;
+    width: 25px;
+    height: 25px;
+  }
+
+  .visibility_header {
+    margin: 15px;
+    background: rgb(46, 38, 38, 0.5);
+    display: flex;
+    width: 25px;
+    height: 25px;
+    border: 2px solid black;
+  }
+
+  .show {
+    display: flex;
+    width: 25px;
+    height: 25px;
+  }
+
+  .info, .admin {
+    font-size: 30px;
+    display: none;
+    margin: auto;
+  }
+
+  /* ПОИСК */
+
+  .search_text {
+    width: 230px;
+    margin: 0;
+    padding: 0;
+    font-size: 14px;
+    height: 35px;
+    padding: 0 10px;
+    border-radius: 14px;
+  }
+
+  .search_submit{
+    width: 35px;
+    height: 35px;
+    border-radius: 14px;
+  }
+
+  .search {
+    display: none;
+    max-width: 100%;
+    width: auto;
+    margin: 10px auto;
+    padding: 0;
+    justify-content: center;
+  }
+
+  /* КОНТЕНТ */
+
+  .characters{
+    width: 100%;
+  }
+
+  .characters-all-filter{
+    width: 95%;
+    margin: auto;
+  }
+
+  .characters-all-filter-element{
+    justify-content: center;
+  }
+
+  .characters-all-section{
+    justify-content: space-around;
+  }
+
+  .characters-all-section-character {
+    width: 150px;
+    height: 360px;
+    margin: 5px 1px;
+  }
+
+  .characters-all-section-character-name {
+    font-size: 20px;
+  }
+
+  .characters-all-section-character-rare-star {
+    width: 20px;
+    margin: 5px 2px;
+  }
+
+  .characters-all-section-character-info-element {
+    width: 30px;
+    height: 30px;
+  }
+
+  .characters-all-section-character-info-weapon {
+    width: 60px;
+    height: 60px;
+  }
+
+
+
+  /* подвал*/
+
+  footer {
+    position: relative;
+    width: auto;
+    flex-direction: column;
+    margin: 30px 0 0 0;
+  }
+
+  footer p {
+    margin: auto auto 20px auto;
+    font-size: 22px;
+  }
+}

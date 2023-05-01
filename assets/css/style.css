@@ -1,0 +1,626 @@
+body {
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  background-color: rgb(34, 34, 34);
+}
+
+header {
+  position: fixed;
+  width: 100%;
+  height: 70px;
+  z-index: 999;
+  display: flex;
+  background-color: rgb(68, 68, 68);
+  box-sizing: border-box;
+  border-bottom: 1px solid black;
+}
+
+a.text:active,
+a.text:hover,
+a {
+  text-decoration: none;
+  color: white;
+}
+
+.info{
+  width: 120px;
+  justify-content: center;
+}
+
+
+
+/* ЛОГО */
+
+.head-header{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: auto 15px;
+}
+
+.logo {
+  height: 66px;
+}
+
+.hide {
+  display: none;
+}
+
+.show {
+  display: none;
+}
+
+
+
+/* ФИЛЬТР */
+
+.title_filter,
+.info,
+.info_footer {
+  font-size: 35px;
+  margin: auto;
+  color: white;
+  cursor: pointer;
+}
+
+.title_filter:hover,
+.info:hover {
+  text-shadow: 1px 0 12px #000, 0 1px 12px #000, -1px 0 12px #000,
+    0 -1px 12px #000;
+}
+
+.filter_block {
+  display: flex;
+  position: fixed;
+  flex-direction: column;
+  width: 100%;
+  height: 100vh;
+  z-index: 1000;
+  background-color: rgb(34, 34, 34);
+  top: 0;
+  left: -100%;
+  transition: left 0.5s;
+  color: white;
+}
+
+.filter {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  font-size: 20px;
+}
+
+.filter * {
+  margin: 5px auto;
+}
+
+.block_elements div input {
+  display: none;
+}
+
+.block_elements div label {
+  cursor: pointer;
+}
+
+.block_elements div input:checked + label {
+  filter: grayscale(80%);
+}
+
+.filter_block_open {
+  left: 0;
+  transition: left 0.5s;
+}
+
+.close_filter {
+  margin: 5px 5px 5px auto;
+  width: 25px;
+  cursor: pointer;
+}
+
+.block_rare div input {
+  display: none;
+}
+
+.block_rare div label {
+  cursor: pointer;
+  filter: grayscale(100%);
+}
+
+.btn_filter * {
+  font-weight: bold;
+  background-color: black;
+  color: white;
+  border: 1px solid black;
+  font-size: 18px;
+  padding: 10px;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+
+
+/* ПОИСК */
+
+.search_submit {
+  border-radius: 18px;
+  width: 50px;
+  margin: 0 0 0 10px;
+  height: 50px;
+  background-color: white;
+  border: 2px solid black;
+  background-image: url(../image/imgElem/lupa.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  cursor: pointer;
+}
+
+.search_text {
+  height: 50px;
+  border-radius: 18px;
+  width: 350px;
+  font-size: 20px;
+  padding: 0 0 0 10px;
+}
+
+.search {
+  margin: 10px 10px 10px auto;
+  width: 450px;
+  display: flex;
+  text-align: center;
+}
+
+
+
+/* КОНТЕНТ */
+
+.content {
+  display: inline-flex;
+  flex-wrap: wrap;
+  margin: 100px 0 0 0;
+  width: 100%;
+  min-height: 100vh;
+  justify-content: center;
+}
+
+.character {
+  background-color: rgb(73, 73, 73);
+  width: 170px;
+  height: 320px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin: 20px;
+  border-radius: 10px;
+  box-sizing: border-box;
+  border: 1px solid black;
+}
+
+.character a img {
+  width: 100%;
+}
+
+.name {
+  font-size: 25px;
+  text-shadow: 1px 0 5px #000, 0 1px 5px #000, -1px 0 5px #000, 0 -1px 5px #000;
+}
+
+.character:hover {
+  box-shadow: 1px 0 15px black, 0 1px 15px black, -1px 0 15px black,
+    0 -1px 15px black;
+}
+
+.name:hover {
+  text-shadow: 1px 0 12px #000, 0 1px 12px #000, -1px 0 12px #000,
+    0 -1px 12px #000;
+}
+
+.anemo {
+  background-color: rgba(51, 215, 160, 0.65);
+}
+
+.geo {
+  background-color: rgb(204, 170, 85);
+}
+
+.cryo {
+  background-color: rgb(171, 216, 226);
+}
+
+.pyro {
+  background-color: rgb(128, 77, 65);
+}
+
+.electro {
+  background-color: rgb(102, 76, 124);
+}
+
+.hydro {
+  background-color: rgb(20, 131, 172);
+}
+
+.dendro {
+  background-color: rgb(94, 126, 19);
+}
+
+.star {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.star * {
+  margin: 5px;
+  width: 20px;
+}
+
+.item_element {
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  padding: 3px;
+  background-color: rgb(46, 46, 46);
+}
+
+.items {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin: 5px auto;
+}
+
+.item_element * {
+  width: 100%;
+  height: 100%;
+}
+
+.weapon {
+  width: 70px;
+  height: 70px;
+}
+
+
+
+/* подвал*/
+
+footer {
+  position: relative;
+  vertical-align: middle;
+  width: 100%;
+  height: auto;
+  display: flex;
+  margin-top: 10px;
+  background-color: rgb(68, 68, 68);
+}
+
+.logo_footer {
+  height: 65px;
+  margin: 16px;
+}
+
+footer p {
+  color: white;
+  font-family: "Times New Roman", Times, serif;
+  margin: auto;
+  font-size: 25px;
+  padding: 5px;
+}
+
+
+
+
+/* МЕДИА-ЗАПРОСЫ */
+
+/* Для full hd и 2k */
+
+@media screen and (min-width: 1920px) and (max-width: 2900px) {
+  .character {
+    width: 250px;
+    height: 470px;
+    margin: 20px;
+    border-radius: 20px;
+  }
+
+  .character a img {
+    width: 250px;
+  }
+
+  .item_element {
+    width: 50px;
+    height: 50px;
+  }
+
+  .weapon {
+    width: 120px;
+    height: 120px;
+  }
+
+  .name{
+    font-size: 30px;
+  }
+}
+
+/* Для телефонов */
+
+@media screen and (max-width: 500px) {
+  body header {
+    display: flex;
+    height: auto;
+    width: 100%;
+    padding: auto;
+    margin: auto;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .info_footer {
+    font-size: 30px;
+  }
+
+  /* ЛОГО */
+
+  .head-header{
+    width: 100%;
+    margin: 0;
+  }
+
+  .logo {
+    height: 60px;
+  }
+
+  /* КНОПКА */
+
+  .hide {
+    display: none;
+    width: 25px;
+    height: 25px;
+  }
+
+  .visibility_header {
+    margin: 15px;
+    background: rgb(46, 38, 38, 0.5);
+    display: flex;
+    width: 25px;
+    height: 25px;
+    border: 2px solid black;
+  }
+
+  .show {
+    display: flex;
+    width: 25px;
+    height: 25px;
+  }
+
+  /* ФИЛЬТР */
+
+  .title_filter,
+  .info {
+    font-size: 30px;
+    display: none;
+  }
+
+  .block_elements div label img {
+    width: 60px;
+  }
+
+  /* ПОИСК */
+
+  .search_text {
+    width: 230px;
+    margin: 0;
+    padding: 0;
+    font-size: 14px;
+    height: 35px;
+    padding: 0 10px;
+    border-radius: 14px;
+  }
+
+  .search_submit{
+    width: 35px;
+    height: 35px;
+    border-radius: 14px;
+  }
+
+  .search {
+    display: none;
+    max-width: 100%;
+    width: auto;
+    margin: 10px 5px;
+    padding: 0;
+    justify-content: center;
+  }
+
+  /* КОНТЕНТ */
+
+  .content {
+    width: 100%;
+    margin: 70px 0 0 0;
+    justify-content: space-around;
+  }
+
+  .character {
+    width: 150px;
+    height: 280px;
+    margin: 5px 1px;
+  }
+
+  .character a img {
+    margin: 0;
+  }
+
+  .name {
+    font-size: 20px;
+  }
+
+  .star * {
+    width: 20px;
+    margin: 5px 2px;
+  }
+
+  .item_element {
+    width: 30px;
+    height: 30px;
+  }
+
+  .weapon {
+    width: 60px;
+    height: 60px;
+  }
+
+  /* подвал*/
+
+  footer {
+    position: relative;
+    width: auto;
+    flex-direction: column;
+    margin: 30px 0 0 0;
+  }
+
+  footer p {
+    margin: auto auto 20px auto;
+    font-size: 20px;
+  }
+}
+
+/* Для планшетов */
+
+@media screen and (min-width: 501px) and (max-width: 950px) {
+  body header {
+    display: flex;
+    height: auto;
+    width: 100%;
+    padding: auto;
+    margin: auto;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .info_footer {
+    font-size: 30px;
+  }
+
+  /* ЛОГО */
+
+  .head-header{
+    width: 100%;
+    margin: 0;
+  }
+
+  .logo {
+    height: 60px;
+    margin: 0;
+    padding: 0;
+  }
+
+  /* КНОПКА */
+
+  .hide {
+    display: none;
+    width: 25px;
+    height: 25px;
+  }
+
+  .visibility_header {
+    margin: 15px;
+    background: rgb(46, 38, 38, 0.5);
+    display: flex;
+    width: 25px;
+    height: 25px;
+    border: 2px solid black;
+  }
+
+  .show {
+    display: flex;
+    width: 25px;
+    height: 25px;
+  }
+
+  /* ФИЛЬТР */
+
+  .title_filter,
+  .info {
+    font-size: 30px;
+    display: none;
+  }
+
+  .block_elements label img {
+    width: 60px;
+  }
+
+  /* ПОИСК */
+
+  .search_text {
+    width: 230px;
+    margin: 0;
+    padding: 0;
+    font-size: 14px;
+    height: 35px;
+    padding: 0 10px;
+    border-radius: 14px;
+  }
+
+  .search_submit{
+    width: 35px;
+    height: 35px;
+    border-radius: 14px;
+  }
+
+  .search {
+    display: none;
+    max-width: 100%;
+    width: auto;
+    margin: 10px 5px;
+    padding: 0;
+    justify-content: center;
+  }
+
+  /* КОНТЕНТ */
+
+  .content {
+    width: 100%;
+    margin: 70px 0 0 0;
+    justify-content: space-around;
+  }
+
+  .character {
+    width: 150px;
+    height: 280px;
+    margin: 5px 1px;
+  }
+
+  .character a img {
+    margin: 0;
+  }
+
+  .name {
+    font-size: 20px;
+  }
+
+  .item_element {
+    width: 30px;
+    height: 30px;
+  }
+
+  .weapon {
+    width: 60px;
+    height: 60px;
+  }
+
+  /* подвал*/
+
+  footer {
+    position: relative;
+    width: auto;
+    flex-direction: column;
+    margin: 30px 0 0 0;
+  }
+
+  footer p {
+    margin: auto auto 20px auto;
+    font-size: 22px;
+  }
+}
